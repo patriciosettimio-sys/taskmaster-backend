@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster - Kanban Board</title>
+    <!-- Modern Typography: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob shape-1"></div>
+        <div class="blob shape-2"></div>
+    </div>
+
+    <!-- Glassmorphism Container -->
+    <div class="app-container">
+        <header>
+            <h1>TaskMaster <span>Pro</span></h1>
+            <p>Live Kanban Board fetching from Django REST Framework</p>
+        </header>
+
+        <main class="board">
+            <!-- Pending Column -->
+            <div class="column">
+                <div class="column-header">
+                    <h2>Pending</h2>
+                    <span class="count" id="count-pending">0</span>
+                </div>
+                <div class="task-list" id="col-pending">
+                    <!-- Tasks will be injected here by JS -->
+                </div>
+            </div>
+
+            <!-- In Progress Column -->
+            <div class="column">
+                <div class="column-header">
+                    <h2>In Progress</h2>
+                    <span class="count" id="count-in-progress">0</span>
+                </div>
+                <div class="task-list" id="col-in-progress">
+                    <!-- Tasks will be injected here by JS -->
+                </div>
+            </div>
+
+            <!-- Done Column -->
+            <div class="column">
+                <div class="column-header">
+                    <h2>Done</h2>
+                    <span class="count" id="count-done">0</span>
+                </div>
+                <div class="task-list" id="col-done">
+                    <!-- Tasks will be injected here by JS -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Drag & Drop Library -->
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
